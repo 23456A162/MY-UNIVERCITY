@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>موقع طلاب العلوم السياسية – جامعة سكيكدة</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+      color: #fff;
+      text-align: center;
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    header {
+      padding: 30px 10px;
+    }
+
+    header img {
+      width: 80px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .search-box {
+      margin: 30px auto;
+      max-width: 600px;
+    }
+
+    input[type="text"] {
+      width: 70%;
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      padding: 14px 20px;
+      margin-top: 10px;
+      font-size: 16px;
+      background-color: #f39c12;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .quick-links, .social {
+      margin: 40px 0;
+    }
+
+    .quick-links a, .social a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 18px;
+      background-color: rgba(255,255,255,0.1);
+      border: 1px solid #fff;
+      border-radius: 8px;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .quick-links a:hover, .social a:hover {
+      background-color: #27ae60;
+    }
+
+    .news-bar {
+      background-color: #f39c12;
+      color: #fff;
+      padding: 10px;
+      font-size: 15px;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: slideLeft 15s linear infinite;
+    }
+
+    @keyframes slideLeft {
+      from {transform: translateX(100%);}
+      to {transform: translateX(-100%);}
+    }
+
+    .inspire {
+      margin-top: 50px;
+      font-size: 18px;
+      font-style: italic;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 13px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/University_of_Skikda_logo.png" alt="جامعة سكيكدة">
+  <h1>موقع طلاب العلوم السياسية – جامعة سكيكدة</h1>
+</header>
+
+<div class="news-bar">
+  📢 جديد: تم إضافة ملخصات السنة الثالثة – نظرية العلاقات الدولية / مقالات تحليل سياسي / روابط بحث في Google Scholar
+</div>
+
+<div class="search-box">
+  <form action="https://www.google.com/search" method="GET" target="_blank">
+    <input type="text" name="q" placeholder="ابحث في Google أو اكتب سؤالاً...">
+    <br>
+    <input type="submit" value="بحث في Google">
+  </form>
+</div>
+
+<div class="quick-links">
+  <h2>روابط مهمة</h2>
+  <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+  <a href="https://ar.wikipedia.org" target="_blank">ويكيبيديا سياسية</a>
+  <a href="https://www.researchgate.net" target="_blank">ResearchGate</a>
+  <a href="https://www.diplomatie.gouv.fr" target="_blank">موقع وزارة الخارجية الفرنسية</a>
+  <a href="#" onclick="alert('قريبًا! صفحة الملخصات قيد الإنشاء.')">📚 ملخصات حسب السنة</a>
+</div>
+
+<div class="social">
+  <h2>ابحث في وسائل التواصل</h2>
+  <a href="#" onclick="searchExternal('youtube')">🔴 YouTube</a>
+  <a href="#" onclick="searchExternal('telegram')">📲 Telegram</a>
+  <a href="#" onclick="searchExternal('facebook')">📘 Facebook</a>
+  <a href="#" onclick="searchExternal('google')">🌐 Google</a>
+</div>
+
+<div class="inspire">
+  "كل طالب سياسي هو مشروع مفكر. ابدأ الآن، وتفوّق على الجميع غدًا."
+</div>
+
+<footer>
+  © 2025 – من تطوير طالب مهتم | بإشراف ChatGPT
+</footer>
+
+<script>
+  function searchExternal(platform) {
+    let query = prompt("🔎 ما الذي تريد البحث عنه؟");
+    if (!query) return;
+    let url = "";
+
+    switch(platform) {
+      case "youtube":
+        url = "https://www.youtube.com/results?search_query=" + encodeURIComponent(query);
+        break;
+      case "telegram":
+        url = "https://t.me/s/" + encodeURIComponent(query);
+        break;
+      case "facebook":
+        url = "https://www.facebook.com/search/top?q=" + encodeURIComponent(query);
+        break;
+      case "google":
+        url = "https://www.google.com/search?q=" + encodeURIComponent(query);
+        break;
+    }
+
+    window.open(url, "_blank");
+  }
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>محرك البحث الجامعي</title>
+  <style>
+    body { font-family: 'Arial'; text-align: center; background: #f7f7f7; padding: 50px; }
+    input[type="text"] { width: 80%; padding: 10px; font-size: 18px; border-radius: 10px; }
+    .engines a { display: inline-block; margin: 10px; font-size: 20px; text-decoration: none; background: #007bff; color: white; padding: 10px 20px; border-radius: 8px; }
+    h1 { color: #333; }
+  </style>
+</head>
+<body>
+  <h1>🔍 محرك البحث لطلاب جامعة سكيكدة</h1>
+  <input type="text" id="search" placeholder="ابحث عن أي شيء...">
+  <div class="engines">
+    <a href="#" onclick="searchAll()">ابحث في الكل</a>
+  </div>
+  <script>
+    function searchAll() {
+      var query = document.getElementById("search").value;
+      if(query.trim() === "") return;
+
+      window.open("https://www.google.com/search?q=" + encodeURIComponent(query));
+      window.open("https://www.youtube.com/results?search_query=" + encodeURIComponent(query));
+      window.open("https://www.facebook.com/search/top?q=" + encodeURIComponent(query));
+      window.open("https://t.me/s/" + encodeURIComponent(query));
+    }
+  </script>
+</body>
+</html>
